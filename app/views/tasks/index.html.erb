@@ -1,0 +1,15 @@
+<h1> ALL TASKS YOU WILL NEVER DO </h1>
+
+<% @tasks.each do |task| %>
+<ul>
+  <li> <%= link_to task.title, task_path(task) %>
+  <%= link_to "Delete", task_path(task),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %> </li>
+</ul>
+<% end %>
+<br>
+  <%= link_to "add", new_task_path %><br>
+
+
+
